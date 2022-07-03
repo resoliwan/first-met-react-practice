@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
     padding: 1rem;
@@ -7,7 +7,7 @@ const Wrapper = styled.div`
     align-items: flex-start;
     justify-content: flex-start;
     background-color: lightgrey;
-`;
+`
 
 const Block = styled.div`
     padding: ${(props) => props.padding};
@@ -18,41 +18,41 @@ const Block = styled.div`
     font-size: 2rem;
     font-weight: bold;
     text-align: center;
-`;
+`
 
 const blockItems = [
-    {
-        label: "1",
-        padding: "1rem",
-        backgroundColor: "red",
-    },
-    {
-        label: "2",
-        padding: "3rem",
-        backgroundColor: "green",
-    },
-    {
-        label: "3",
-        padding: "2rem",
-        backgroundColor: "blue",
-    },
-];
+  {
+    label: '1',
+    padding: '1rem',
+    backgroundColor: 'red'
+  },
+  {
+    label: '2',
+    padding: '3rem',
+    backgroundColor: 'green'
+  },
+  {
+    label: '3',
+    padding: '2rem',
+    backgroundColor: 'blue'
+  }
+]
 
-function Blocks(props) {
-    return (
-        <Wrapper>
-            {blockItems.map((blockItem) => {
-                return (
-                    <Block
-                        padding={blockItem.padding}
-                        backgroundColor={blockItem.backgroundColor}
-                    >
-                        {blockItem.label}
-                    </Block>
-                );
-            })}
-        </Wrapper>
-    );
+function Blocks (props) {
+  return (
+    <Wrapper>
+      {blockItems.map((blockItem) => {
+        return (
+          <Block
+            padding={blockItem.padding}
+            backgroundColor={blockItem.backgroundColor}
+          >
+            {blockItem.label}
+          </Block>
+        )
+      })}
+    </Wrapper>
+  )
 }
 
-export default Blocks;
+export default Blocks
